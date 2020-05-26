@@ -40,6 +40,7 @@ class ProductController extends Controller
        $product=new Product;
        $product->category_id = $request->category_id;
        $product->product_id = $request->product_id;
+       $product->admin_id=$request->admin_id;
        $product->title = $request->title;
        $product->slug = $request->slug;
        $product->description = $request->description;
@@ -88,6 +89,7 @@ class ProductController extends Controller
     {   $product=Product::find($id);
         $product->category_id=$request->category_id;
         $product->product_id=$request->product_id;
+        $product->admin_id=$request->admin_id;
         $product->title=$request->title;
         $product->slug=$request->slug;
         $product->description=$request->description;

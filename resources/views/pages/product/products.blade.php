@@ -12,6 +12,8 @@
 
         <th>ProductId</th>
 
+        <th>AdminId</th>
+
         <th>Title</th>
 
         <th>Slug</th>
@@ -40,6 +42,8 @@
         <td>{{ $product->category_id }}</td>
 
         <td>{{ $product->product_id }}</td>
+
+        <td>{{ $product->admin_id }}</td>
 
         <td>{{ $product->title }}</td>
 
