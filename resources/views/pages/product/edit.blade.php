@@ -15,9 +15,9 @@
         </div>
 
         <div class="form-group">
-            <label for="exampleAdminId">AdminId</label>
-            <input type="text" class="form-control" name="admin_id" id="admin_id"
-            value="{{ $product->admin_id }}">
+            <label for="exampleProductId">Product</label>
+            <input type="text" class="form-control" name="product_id" id="product_id"
+            value="{{ $product->product_id }}">
           </div>
 
           <div class="form-group">

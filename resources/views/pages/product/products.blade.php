@@ -10,7 +10,7 @@
         <th>Sl.</th>
         <th>CategoryId</th>
 
-        <th>AdminId</th>
+        <th>ProductId</th>
 
         <th>Title</th>
 
@@ -39,7 +39,7 @@
         <td>{{ $i }}</td>
         <td>{{ $product->category_id }}</td>
 
-        <td>{{ $product->admin_id }}</td>
+        <td>{{ $product->product_id }}</td>
 
         <td>{{ $product->title }}</td>
 

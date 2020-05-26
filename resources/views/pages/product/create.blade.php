@@ -4,7 +4,7 @@
 @section('content')
 <h1 align="center">Create New Product</h1>
 <div class="container">
-   
+
     <form class="form-horizontal" action="{{ route('store') }}" method="post">
         @csrf
 
@@ -14,8 +14,8 @@
         </div>
 
         <div class="form-group">
-            <label for="exampleAdminId">AdminId</label>
-            <input type="text" class="form-control" name="admin_id" id="admin_id">
+            <label for="exampleProductId">ProductId</label>
+            <input type="text" class="form-control" name="product_id" id="product_id">
           </div>
 
           <div class="form-group">
