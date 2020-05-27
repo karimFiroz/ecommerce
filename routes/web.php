@@ -30,3 +30,11 @@ Route::post('/store', 'ProductController@store')->name('store');
 Route::get('/edit/{id}', 'ProductController@edit')->name('edit');
 Route::post('/update/{id}', 'ProductController@update')->name('update');
 Route::post('/delete/{id}', 'ProductController@delete')->name('delete');
+
+
+Route::get('/login','AuthController@showLoginForm')->name('login');
+Route::post('/login','AuthController@processLogin');
+
+Route::get('/register','AuthController@showRegisterForm')->name('register');
+Route::post('/register','AuthController@processRegister');
+
