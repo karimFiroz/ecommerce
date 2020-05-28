@@ -1,12 +1,13 @@
 @extends('master')
 @section('content')
-    <h1 align="center">Registration Form</h1>
+
+    <h1 align="center">Login Page</h1>
     <div class="container">
         <div class="row">
 
             <div class="col-md-6 offset-md-3">
                 <div class="well">
-                
+
 {{---validation--}}
 @if($errors->any())
 <div class="alert alert-danger">
@@ -25,19 +26,14 @@
 @endif
 
 {{--validation end--}}
-           
-            <form action="{{ route('register') }}" method="post" class="form form-horizontal">
-                @csrf
 
-                <div class="form-group">
-                    <label for="exampleInputName">Name</label>
-                    <input type="text"name="name"value="{{ old('name') }}" class="form-control" id="exampleInputPassword1">
-                  </div>
+            <form action="{{ route('login') }}" method="post" class="form form-horizontal">
+                @csrf
 
 
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email</label>
-                  <input type="email"name="email"value="{{ old('email') }} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <input type="email" name="email" value="{{ old('email') }} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
 
                 <div class="form-group">
@@ -45,7 +41,7 @@
                   <input type="password"name="password"value="{{ old('password') }} class="form-control" id="exampleInputPassword1">
                 </div>
 
-                <button type="submit" class="btn btn-primary">Register</button>
+                <button type="submit" class="btn btn-primary">Log In</button>
               </form>
             </div>
         </div>

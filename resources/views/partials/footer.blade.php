@@ -2,7 +2,7 @@
 
 
   <footer class="footer bg-light">
-    <div style="height:50px; width:100%; background-color:#ff0000;text-align:center;color:white;">
+    <div style="height:50px; width:100%; background-color:#767F8D;text-align:center;color:white;">
         <h5>{{ $footerText }}</h5>
     </div>
     <div class="container">

@@ -13,17 +13,20 @@
 </head>
 
 <body>
-    @include('partials.call-to-action')
+
+    @includeIf('partials.address',[
+        'karim'=>'E-commerce'
+    ])
     <!-- Navigation -->
 
 
     @includeWhen(true,'partials.navigation',[
-        'headerText'=>'E-commerce'
+        'headerText'=>''
+    ])
+    @includeIf('partials.address',[
+        'karim'=>''
     ])
 
-    @includeIf('partials.address',[
-        'karim'=>'Firozshah Colony,Akbarshah, Chittagong.'
-    ])
 
 
 
@@ -31,7 +34,7 @@
   @yield('content')
 
 
-
+  @include('partials.call-to-action')
   <!-- Icons Grid -->
 
   <!-- Image Showcases -->
@@ -46,20 +49,19 @@
 
 
 
-@include('partials.testimonials')
+
   <!-- Footer -->
-  @includeFirst(['partials.admin'],[
-    'firoz'=>'Blog: https://firozlearninghome.blogspot.com'
-])
 
 
 @include('partials.footer-col')
 
 
 @includewHEN(true,'partials.footer',[
-    'footerText'=>' Allrights Reserved By Md.Abdul Karim(Assistent teacher:1995-2023)'
+    'footerText'=>' '
 ])
-
+ @includeIf('partials.address',[
+        'karim'=>'Allrights Reserved By Md.Abdul Karim(Assistent teacher:1995-2023)'
+    ])
   <!-- Bootstrap core JavaScript -->
 @include('partials.scripts')
 
