@@ -13,10 +13,8 @@
 </head>
 
 <body>
+    @include('partials.call-to-action')
 
-    @includeIf('partials.address',[
-        'karim'=>'E-commerce'
-    ])
     <!-- Navigation -->
 
 
@@ -24,7 +22,7 @@
         'headerText'=>''
     ])
     @includeIf('partials.address',[
-        'karim'=>''
+        'karim'=>'Firozshah Colony, Akbarshah, Chittagong'
     ])
 
 
@@ -34,7 +32,7 @@
   @yield('content')
 
 
-  @include('partials.call-to-action')
+
   <!-- Icons Grid -->
 
   <!-- Image Showcases -->
@@ -57,10 +55,10 @@
 
 
 @includewHEN(true,'partials.footer',[
-    'footerText'=>' '
+    'footerText'=>'Allrights Reserved By Md.Abdul Karim(Assistent teacher:1995-2023)'
 ])
  @includeIf('partials.address',[
-        'karim'=>'Allrights Reserved By Md.Abdul Karim(Assistent teacher:1995-2023)'
+        'karim'=>''
     ])
   <!-- Bootstrap core JavaScript -->
 @include('partials.scripts')

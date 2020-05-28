@@ -25,8 +25,11 @@ Route::get('/product', 'PagesController@product')->name('product');
 
 
 Route::get('/products', 'ProductController@products')->name('products');
+
 Route::get('/create', 'ProductController@create')->name('create');
 Route::post('/store', 'ProductController@store')->name('store');
+
+
 Route::get('/edit/{id}', 'ProductController@edit')->name('edit');
 Route::post('/update/{id}', 'ProductController@update')->name('update');
 Route::post('/delete/{id}', 'ProductController@delete')->name('delete');
@@ -35,8 +38,10 @@ Route::post('/delete/{id}', 'ProductController@delete')->name('delete');
 Route::get('/login','AuthController@showLoginForm')->name('login');
 Route::post('/login','AuthController@processLogin');
 
+
 Route::get('/register','AuthController@showRegisterForm')->name('register');
 Route::post('/register','AuthController@processRegister');
+
 
 Route::get('/profile','AuthController@showProfile')->name('profile');
 Route::get('/logout','AuthController@logout')->name('logout');

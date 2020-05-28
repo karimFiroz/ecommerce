@@ -9,39 +9,43 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
+
         <li class="nav-item active">
-          <a class="nav-link" href="{{route('index')}}">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="{{route('index')}}">HOME <span class="sr-only">(current)</span></a>
         </li>
+
         <li class="nav-item dropdown">
             <a class="nav-link" href="{{ route('about') }}">ABOUT US</a>
         </li>
+
         <li class="nav-item dropdown">
             <a class="nav-link" href="{{ route('contact') }}">CONTACT US</a>
         </li>
+        
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
+            DROPDOWN
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="nav-link" href="{{ route('create') }}">CREATE</a>
             <a class="nav-link" href="{{ route('products') }}">PRODUCT LIST</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="{{route('all_products')}}">PRODUCTS</a>
+            <a class="dropdown-item" href="{{route('all_products')}}">ALL PRODUCTS</a>
             <a class="dropdown-item" href="{{route('product')}}">PRODUCT</a>
           </div>
         </li>
 
         @auth()
         <li>
-        	<a href="{{route('profile')}}" class="text-white">Profile ({{optional(auth()->user())->name}})</a>
-        	<a href="{{route('logout')}}" class="text-white">Log Out</a>
+        	<a href="{{route('profile')}}" class="text-white">PROFILE ({{optional(auth()->user())->name}})</a>
+        	<a href="{{route('logout')}}" class="text-white">LOGOUT</a>
         </li>
         @endauth
 
         @guest()
-        <li class="nav-item"><a class="nav-link"  href="{{route('login')}}">Login</a></li>
+        <li class="nav-item"><a class="nav-link"  href="{{route('login')}}">LOGIN</a></li>
 
-          <li class="nav-item"><a class="nav-link"  href="{{ route('register') }}">Register</a></li>
+          <li class="nav-item"><a class="nav-link"  href="{{ route('register') }}">REGISTER</a></li>
           @endguest
       </ul>
       <form class="form-inline my-2 my-lg-0">

@@ -57,6 +57,11 @@ public function showLoginForm(){
     return view('login');
 }
 
+
+
+
+
+
 public function processLogin(Request $request){
 	//validation
 $this->validate($request,[
@@ -72,6 +77,9 @@ if(auth()->attempt($credentials)){
 	 $this->setErrorMessage('Invalid credentials');
 	 return redirect()->back();
 }
+
+
+
 
 public function logout(){
     auth()->logout();
